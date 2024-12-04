@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>customer</title>
+    </head>
+    <body>
+        <table border=2>
+            <tr>
+                <th>id</th>
+                <th>item</th>
+                <th>rate</th>
+                <th>contact</th>
+                <th>delete</th>
+                <th>update</th>
+            </tr>
+            <tr>
+                {% for x in my %}
+                <td>{{x.id}}</td>
+                <td>{{x.item}}</td>
+                <td>{{x.rate}}</td>
+                <td>{{x.contact}}</td>
+                <td><a href='del/{{x.id}}'>delete</a></td>
+                <td><a href='upd/{{x.id}}'>update</a></td>
+            </tr>
+                 {% endfor %}   
+           
+         </table><br><br>
+         <tr> 
+            <button><a href='{% url  'fram' %}'>go to</a></button>
+            <button><a href='{% url  'contct' %}'>create</a></button>
+        </tr>
+      
+    </body>
+</html>

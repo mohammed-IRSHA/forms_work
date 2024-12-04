@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <title>forms</title>
+    </head>
+    <body>
+        <form method='POST'>
+            {% csrf_token %}
+            <label for='id'>id</label>
+            <input type='text'id='id' name='id' value='{{daata.id}}'><br><br>
+            <label for='item'>item</label>
+            <input type=text id='item' name='item' value='{{daata.item}}'><br><br>
+            <label for='rate'>rate</label>
+            <input type='text' id='rate' name='rate' value='{{daata.rate}}'><br><br>
+            <label for='contact'>contact</label>
+            <input type='text' id='contact' name='contact' value='{{daata.contact}}'><br><br>
+            <button type='submit'>submitt</button>
+         </form>
+       
+    </body>
+</html>
